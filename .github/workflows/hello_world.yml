@@ -1,0 +1,15 @@
+# 1. GHSCD - Hello World Github Actions
+
+name: Hello World!
+# push = qualquer modificação no repositorio dispara a automação, workflow_dispatch disparo manual
+on: [push, workflow_dispatch]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    name: Job Hello World
+    steps:
+      - run: id
+      - run: uname -a
+      - run: env
+      - run: echo "Hello World GHFC 2025!"
